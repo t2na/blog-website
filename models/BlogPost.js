@@ -12,7 +12,7 @@ BlogPost.init(
             autoIncrement: true,
         },
         title: {
-            tpye: DataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         description: {
@@ -30,6 +30,13 @@ BlogPost.init(
                 key: 'id',
             }
         }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'blogPost',
     }
 )
 
