@@ -1,8 +1,13 @@
 module.exports = {
     format_date: (date) => {
+        if (!(date instanceof Date)) {
+            console.error('Invalid date:', date);
+            return 'Invalid Date';
+        }
         // Format date as MM/DD/YYYY
         return date.toLocaleDateString();
     },
+
     format_amount: (amount) => {
         // format large numbers with commas
         return parseInt(amount).toLocaleString();

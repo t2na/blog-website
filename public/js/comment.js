@@ -7,6 +7,7 @@ document.querySelector('.add-comment-form').addEventListener('submit', async (e)
     const blogpost_id = blogpostElement.getAttribute('data-blogpost-id');
 
     if (content) {
+        console.log(content, blogpost_id);
         const response = await fetch('/api/comments', {
             method: 'POST',
             body: JSON.stringify({ content, blogpost_id }),
