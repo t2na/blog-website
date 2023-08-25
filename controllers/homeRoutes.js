@@ -31,6 +31,28 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/edit-post/:id', async (req, res) => {
+    try {
+        const postData = await BlogPost.findByPk(req.params.id);
+
+        if (!postData) {
+            return res.status(404).json({ message: 'No post found with this ID!' });
+        }
+
+        const post = postData.get({ plain: true });
+
+        res.render('update-post', {
+            post,
+            loggedIn: req.session.logged_in
+        });
+
+        console.log(post);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json(err);
+    }
+});
+
 router.get('/blogpost/:id', async (req, res) => {
     try {
         const blogPostData = await BlogPost.findByPk(req.params.id, {
