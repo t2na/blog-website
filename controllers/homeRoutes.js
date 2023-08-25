@@ -43,7 +43,7 @@ router.get('/edit-post/:id', async (req, res) => {
 
         res.render('update-post', {
             post,
-            loggedIn: req.session.logged_in
+            logged_in: req.session.logged_in
         });
 
         console.log(post);
