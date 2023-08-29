@@ -3,7 +3,7 @@
 A blog post website built with node.js, handlebars.js SQL, express, and sequelize.
 
 ### Description
-The attached project file(s) are for our seventeenth challenge as part of the UC Berkeley full stack coding bootcamp. The goal of the challenge was to a CMS-style blog post website, similar to a Wordpress site, where users can publish their blog posts and comment on others blog posts, as well. The application follows the MVC paradigm in its architectural structure and uses handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+The attached project file(s) are for our fourteenth challenge as part of the UC Berkeley full stack coding bootcamp. The goal of the challenge was to a CMS-style blog post website, similar to a Wordpress site, where users can publish their blog posts and comment on others blog posts, as well. The application follows the MVC paradigm in its architectural structure and uses handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
 This project helped introduce me to the architectural rigor of the MVC paradigm, which organizes the front and backend into compartmentalized sections. Building the application in this way gave me perspective into how more robust applications are structured.
 
